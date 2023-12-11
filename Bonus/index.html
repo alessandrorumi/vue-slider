@@ -17,7 +17,7 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img :src="slides[imageActive].image" alt="" />
+                    <img :src="slides[imageActive].image" alt="" @mouseenter="stopCarousel" @mouseleave="restartCarousel"/>
                     <div class="text">
                         <h3>{{slides[imageActive].title}}</h3>
                         <p>

@@ -74,7 +74,16 @@ createApp({
         if (this.imageActive >  this.slides.length - 1) {
             this.imageActive = 0;
         }
+    },
+
+    stopCarousel() {
+        clearInterval(this.timer);
+    },
+
+    restartCarousel() {
+        this.timer = setInterval(this.changeImage, 3000);
     }
+
   }
 
 }).mount('#app')
