@@ -56,6 +56,11 @@ createApp({
         if (this.imageActive >  this.slides.length - 1) {
             this.imageActive = 0;
         }
+    },
+
+    thumbToImg(index) {
+        // console.log(`Hai cliccato sulla img ${index + 1}`);
+        this.imageActive = index;
     }
 
   }
