@@ -76,10 +76,16 @@ createApp({
 
     prevImg() {
         this.imageActive--;
+        if (this.imageActive < 0) {
+            this.imageActive =  this.slides.length - 1;
+        }
     },
 
     nextImg() {
         this.imageActive++;
+        if (this.imageActive >  this.slides.length - 1) {
+            this.imageActive = 0;
+        }
     }
 
   }
