@@ -69,8 +69,11 @@ createApp({
     },
 
     changeImage() {
-        console.log('Ogni 3 secondi');
+        // console.log('Ogni 3 secondi');
         this.imageActive++;
+        if (this.imageActive >  this.slides.length - 1) {
+            this.imageActive = 0;
+        }
     }
   }
 
