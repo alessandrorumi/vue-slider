@@ -42,6 +42,11 @@ createApp({
 
   },
 
+  mounted() {
+    // Avvia il timer al momento del montaggio del componente
+    this.timer = setInterval(this.changeImage, 3000);
+  },
+
   methods: {
 
     prevImg() {
@@ -61,8 +66,12 @@ createApp({
     thumbToImg(index) {
         // console.log(`Hai cliccato sulla img ${index + 1}`);
         this.imageActive = index;
-    }
+    },
 
+    changeImage() {
+        console.log('Ogni 3 secondi');
+        this.imageActive++;
+    }
   }
 
 }).mount('#app')
